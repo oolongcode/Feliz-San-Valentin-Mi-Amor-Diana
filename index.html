@@ -753,18 +753,32 @@ function startExperience(){
 
     setTimeout(()=>{
         startScreen.style.display="none";
-        playMusicWithFade();
+
+        // Crear audio aquí, tras interacción
+        audio = new Audio("Perfecta.mp3"); // ruta exacta
+        audio.loop = true;
+        audio.volume = 0;
+        audio.play().catch(e => console.log("Interacción requerida para audio", e));
+
+        // Fade-in
+        let fade = setInterval(()=>{
+            if(audio.volume < 0.7){ // volumen máximo
+                audio.volume += 0.05;
+            } else clearInterval(fade);
+        }, 200);
+
+        // Mostrar la primera tarjeta
+        showNextCardText();
     },1800);
-
-
 }
+
 
 /* --------- CARTAS --------- */
 
 const stack = document.getElementById("stack");
 let cards = document.querySelectorAll(".card");
 let currentIndex = 0;
-let audio = new Audio();
+//let audio = new Audio();
 
 function setZIndex(){
     cards.forEach((card,i)=>{
@@ -1146,5 +1160,6 @@ setInterval(() => {
 
 </body>
 </html>
+
 
 
