@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuestra Historia De Amor❤️</title>
+<!-- Favicon con emoji 💖 -->
+<link rel="icon" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+  <text y='90' font-size='90'>💖</text>
+</svg>">
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+<style>
+/* Pantalla inicial - título */
+.start-screen h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(32px, 8vw, 56px);
+    color: #ff99cc;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 1;
+    animation: beatText 1.2s infinite ease-in-out;
+    text-shadow: 
+        0 0 8px rgba(255,105,180,0.6),
+        0 0 16px rgba(255,182,193,0.5),
+        0 0 24px rgba(255,105,180,0.4);
+}
+
+/* Animación de latido con halo pulsante y cambio de color */
+@keyframes beatText {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow: 
+            0 0 8px rgba(255,105,180,0.6),
+            0 0 16px rgba(255,182,193,0.5),
+            0 0 24px rgba(255,105,180,0.4);
+        color: #ff99cc;
+    }
+    50% {
+        transform: scale(1.08);
+        text-shadow: 
+            0 0 12px rgba(255,20,147,0.8),
+            0 0 24px rgba(255,105,180,0.6),
+            0 0 36px rgba(255,20,147,0.5);
+        color: #ff4da6;
+    }
+}
+
+
+
+/* Botón romántico seguro */
+/* BOTÓN ROMÁNTICO ANIMADO */
+/* BOTÓN ROMÁNTICO ANIMADO MEJORADO */
+/* BOTÓN ROMÁNTICO ARMÓNICO */
+/* BOTÓN ROMÁNTICO ARMÓNICO */
+/* BOTÓN ROMÁNTICO CON TEXTO ANIMADO */
+/* BOTÓN ROMÁNTICO CON TEXTO ANIMADO */
+.start-btn {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(18px, 4vw, 24px);
+    padding: 15px 40px;
+    border-radius: 50px;
+
+    /* Fondo translúcido suave */
+    background: rgba(255,182,193,0.25);
+    backdrop-filter: blur(6px);
+    border: 2px solid rgba(255,105,180,0.4);
+
+    /* Texto con degradado animado */
+    background: linear-gradient(90deg, #ffc0cb, #ff99cc, #ff4da6, #ffb6c1);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(255,182,193,0.8);
+
+    cursor: pointer;
+
+    /* Sutil sombra romántica */
+    box-shadow: 0 8px 20px rgba(255,105,180,0.3);
+
+    /* Animaciones */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: beatButton 1.5s infinite ease-in-out, textGradient 6s ease infinite;
+}
+
+/* Hover romántico (solo escala y sombra) */
+.start-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 28px rgba(255,105,180,0.6);
+}
+
+/* Latido del botón */
+@keyframes beatButton {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+}
+
+/* Animación de degradado de texto */
+@keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+
+/* Degradado animado */
+@keyframes gradientShift {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+
+
+/* Latido del botón */
+@keyframes beatButton {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+}
+
+/* Degradado animado */
+@keyframes gradientShift {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+
+
+/* Corazones flotando desde el botón */
+.btn-heart {
+    position: absolute;
+    font-size: 16px;
+    pointer-events: none;
+    animation: floatHeart 1.2s ease-out forwards;
+    z-index: 999;
+    text-shadow: 0 0 6px rgba(255,182,193,0.8);
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-40px) scale(1.4);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeUpText{
+    0%{
+        opacity:0;
+        transform: translateY(15px);
+        filter: drop-shadow(0 0 0 rgba(255,105,180,0));
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0);
+        filter: drop-shadow(0 0 6px rgba(255,105,180,0.6));
+    }
+}
+
+
+/* ----------------- TÍTULOS DE CARTAS ----------------- */
+.card h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(20px, 4vw, 28px);
+    color: #ff99cc;
+    background: linear-gradient(90deg, #ffb6c1, #ff69b4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 8px rgba(255,105,180,0.7);
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeUpText 1s ease forwards;
+}
+
+/* ----------------- MENSAJE FINAL ----------------- */
+.final-content h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(28px, 6vw, 40px);
+    color: #ff99cc;
+    background: linear-gradient(90deg, #ffb6c1, #ff69b4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 12px rgba(255,105,180,0.8);
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeUpText 1.2s ease forwards;
+}
+
+/* ----------------- TEXTOS NORMALES ----------------- */
+.card p, .final-content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(14px, 3.5vw, 18px);
+    color: #ffc0cb;
+    text-shadow: 0 0 4px rgba(255,182,193,0.6);
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeUpText 1.2s ease forwards;
+    animation-delay: 0.2s;
+}
+
+
+
+
+    /* ---------------- HALO RESPIRANDO ---------------- */
+
+@keyframes haloBreath{
+
+    0%{
+        transform: translateX(-1.5%) scale(1);
+        opacity:0.75;
+    }
+
+    50%{
+        transform: translateX(1.5%) scale(1.05);
+        opacity:0.95;
+    }
+
+    100%{
+        transform: translateX(-1.5%) scale(1);
+        opacity:0.75;
+    }
+}
+
+.final-message{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:clamp(24px,5vw,40px);
+    color:#ffb6c1;
+    opacity:0;
+    backdrop-filter:blur(8px);
+    background:rgba(0,0,0,0.5);
+    z-index:10;
+    transition:opacity 2s ease;
+}
+
+.final-message.show{
+    opacity:1;
+}
+
+.final-content{
+    animation: finalFade 3s ease forwards;
+}
+
+@keyframes finalFade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Micro destello */
+
+.final-flash{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+        rgba(255,182,193,0.7) 0%,
+        rgba(255,105,180,0.35) 35%,
+        transparent 75%);
+    opacity:0;
+    pointer-events:none;
+    transform:translate(-50%, -50%);
+}
+
+
+.flash-active{
+    animation: flashBurst 1.2s ease-out forwards;
+}
+
+@keyframes flashBurst{
+    0%{
+        opacity:0.9;
+        transform:scale(0.5);
+    }
+    100%{
+        opacity:0;
+        transform:scale(2.2);
+    }
+}
+
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:-20%;
+    pointer-events:none;
+    z-index:0;
+
+    background: radial-gradient(
+        circle at center,
+        rgba(255,105,180,0.18) 0%,
+        rgba(255,105,180,0.10) 25%,
+        transparent 65%
+    );
+
+    animation: haloBreath 20s ease-in-out infinite;
+}
+
+
+.sparkle{
+    position:fixed;
+    font-size:14px;
+    pointer-events:none;
+    animation: heartBurst 1.4s ease-out forwards;
+    z-index:5;
+    text-shadow: 0 0 8px rgba(255,105,180,0.9);
+}
+
+@keyframes heartBurst{
+    0%{
+        transform: scale(0.8);
+        opacity:1;
+    }
+    100%{
+        transform: scale(1.8);
+        opacity:0;
+    }
+}
+
+
+@keyframes sparkleFade{
+    0%{
+        transform: scale(1);
+        opacity:1;
+    }
+    100%{
+        transform: scale(2.5);
+        opacity:0;
+    }
+}
+
+
+/* ---------------- VIÑETA ROMÁNTICA ---------------- */
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background: radial-gradient(circle at center,
+        transparent 55%,
+        rgba(0,0,0,0.5) 85%);
+    pointer-events:none;
+    z-index:1;
+}
+
+/* ---------------- PARTÍCULAS ---------------- */
+
+.particle{
+    position:fixed;
+    width:4px;
+    height:4px;
+    background:rgba(255,182,193,0.8);
+    border-radius:50%;
+    box-shadow:0 0 10px rgba(255,105,180,0.9);
+    animation: floatUp linear forwards;
+    pointer-events:none;
+    z-index:0;
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(100vh) scale(1);
+        opacity:0;
+    }
+    10%{ opacity:1; }
+    to{
+        transform:translateY(-10vh) scale(1.8);
+        opacity:0;
+    }
+}
+
+/* ---------------- ESTRELLAS LEJANAS ---------------- */
+
+.star{
+    position:fixed;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    box-shadow:0 0 6px pink;
+    animation: twinkle 3s infinite ease-in-out;
+    pointer-events:none;
+    z-index:0;
+}
+
+@keyframes twinkle{
+    0%,100%{ opacity:0.2; }
+    50%{ opacity:1; }
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 50% 40%, rgba(255,105,180,0.25) 0%, rgba(255,105,180,0.15) 15%, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(255,20,147,0.15) 0%, transparent 35%),
+        radial-gradient(circle at 20% 80%, rgba(255,105,180,0.12) 0%, transparent 40%),
+        radial-gradient(circle at center, #1a000d 0%, #0d0006 40%, #000000 80%);
+    background-attachment: fixed;
+
+    background-size:400% 400%;
+    animation:bg 20s ease infinite;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Transición cinematográfica */
+.fade-out{
+    animation: fadeMagic 1.8s ease forwards;
+}
+
+@keyframes fadeMagic{
+    0%{
+        opacity:1;
+        filter:blur(0px);
+    }
+    100%{
+        opacity:0;
+        filter:blur(15px);
+        transform:scale(1.05);
+    }
+}
+
+.halo-react{
+    animation: haloPulse 3.5s ease-in-out;
+}
+
+@keyframes haloPulse{
+    0%{ opacity:0.75; }
+    50%{ opacity:0.95; }
+    100%{ opacity:0.75; }
+}
+
+
+/* ---------------- PANTALLA INICIAL ---------------- */
+
+.start-screen{
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at center, rgba(255,120,180,0.3) 0%, rgba(255,120,180,0.15) 20%, transparent 45%),
+        radial-gradient(circle at 70% 30%, rgba(255,20,147,0.2) 0%, transparent 40%),
+        radial-gradient(circle at center, #200010 0%, #100008 50%, #000000 90%);
+
+
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+    overflow:hidden;
+    transition:1s;
+}
+
+.start-screen.hidden{
+    opacity:0;
+    pointer-events:none;
+}
+
+.start-screen h1{
+    font-size:clamp(28px,6vw,50px);
+    margin-bottom:30px;
+    text-align:center;
+    z-index:2;
+}
+
+
+/* Corazones y flores */
+.falling{
+    position:absolute;
+    top:-50px;
+    font-size:20px;
+    animation:fall linear infinite;
+    opacity:0.8;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+
+/* ---------------- CARTAS ---------------- */
+
+.stack{
+    position:relative;
+    width:90vw;
+    max-width:450px;
+    aspect-ratio:4/5;
+    max-height:90vh;
+}
+
+.card{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:clamp(15px,3vw,25px);
+    border:2px solid rgba(255,255,255,0.2);
+    box-shadow:0 20px 40px rgba(0,0,0,0.6);
+    text-align:center;
+    transition: transform 0.35s cubic-bezier(.22,.61,.36,1), 
+                opacity 0.35s ease, 
+                top 0.35s ease, 
+                left 0.35s ease;
+    cursor:grab;
+    display:flex;
+    flex-direction:column;
+}
+
+
+/* Posiciones iniciales de las cartas en el stack */
+.card:nth-child(1){ top: 0px; left: 0px; transform: rotate(-2deg); }
+.card:nth-child(2){ top: 20px; left: 5px; transform: rotate(1deg); }
+.card:nth-child(3){ top: 40px; left: -5px; transform: rotate(-1deg); }
+.card:nth-child(4){ top: 60px; left: 3px; transform: rotate(2deg); }
+
+
+.card img{
+    width:100%;
+    height:60%;
+    object-fit:cover;
+    border-radius:20px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#ff99cc;
+    margin-bottom:10px;
+    font-size:clamp(18px,4vw,24px);
+}
+
+.card p{
+    font-size:clamp(14px,3.5vw,18px);
+}
+
+.drag-trail{
+    position:absolute;
+    font-size:14px;
+    pointer-events:none;
+    z-index:6;
+    text-shadow: 0 0 10px rgba(255,105,180,0.9);
+    opacity:1;
+    transform: translate(0,0) scale(1);
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<!-- PANTALLA INICIAL -->
+<div class="start-screen" id="startScreen">
+    <h1>Nuestra Historia Diana ❤️</h1>
+    <button class="start-btn" onclick="startExperience()">Iniciar Historia</button>
+</div>
+
+<!-- CARTAS -->
+<div class="stack" id="stack">
+
+<div class="card">
+    <img src="amigos.jpg" alt="Amigos">
+    <h3>Cuando éramos amigos</h3>
+    <p class="card-text" data-text="
+Todo comenzó con risas interminables 😄✨
+y charlas que hacían volar el tiempo 🕊️⏳.
+Jamás llegamos a imaginar que esos días marcarían el inicio 
+de algo mucho más profundo ❤️🌟💫.
+"></p>
+</div>
+
+<div class="card">
+    <img src="enamorado.jpg" alt="Enamorado">
+    <h3>Empezamos a sentir algo más</h3>
+    <p class="card-text" data-text="
+Poco a poco, nuestras miradas se volvieron más largas 👀💓
+y nuestros corazones latían con un ritmo distinto cuando estábamos juntos 💘💞.
+Cada sonrisa 😍, cada palabra 💬,
+se volvió un puente hacia algo que ninguno de los dos podía ignorar 💕🌹.
+"></p>
+</div>
+
+<div class="card">
+    <img src="confesion.jpg" alt="Confesión">
+    <h3>Te confesé mi amor</h3>
+    <p class="card-text" data-text="
+Entonces, no pude callar más lo que sentía 😢💖.
+Te miré a los ojos 👁️✨ y te confesé mis sentimientos más sinceros 💌💝.
+El mundo pareció detenerse por un momento 🌙⭐,
+y supe que todo valía la pena contigo 💑💫.
+"></p>
+</div>
+
+<div class="card">
+    <img src="juntos.jpg" alt="Juntos">
+    <h3>Ahora juntos ❤️</h3>
+    <p class="card-text" data-text="
+Ahora cada momento contigo es una aventura inolvidable 🌈💑
+llena de risas 😄🎉, abrazos 🤗💖 y sueños compartidos 🌟✨.
+Esta historia apenas comienza 📖💫,
+y quiero seguir escribiéndola contigo, llenándola de amor cada día 💕❤️🌹.
+"></p>
+</div>
+
+
+
+
+
+
+<script>
+
+function createSparkleBurst(){
+
+    const hearts = ["💖","💗","💕","💘"];
+
+    for(let i=0;i<10;i++){
+
+        const h = document.createElement("div");
+        h.className = "sparkle";
+        h.innerHTML = hearts[Math.floor(Math.random()*hearts.length)];
+
+        const angle = Math.random() * 2 * Math.PI;
+        const radius = 40 + Math.random()*70;
+
+        const x = Math.cos(angle) * radius;
+        const y = Math.sin(angle) * radius;
+
+        h.style.left = "50vw";
+        h.style.top = "50vh";
+
+        h.style.transform = `translate(${x}px, ${y}px)`;
+
+        document.body.appendChild(h);
+
+        setTimeout(()=> h.remove(),1400);
+    }
+}
+
+
+
+    /* -------- PARTÍCULAS SUAVES -------- */
+
+function createParticle(){
+    const p = document.createElement("div");
+    p.className = "particle";
+    p.style.left = Math.random()*100 + "vw";
+    p.style.animationDuration = (6 + Math.random()*6) + "s";
+    p.style.opacity = Math.random();
+    document.body.appendChild(p);
+
+    setTimeout(()=> p.remove(),12000);
+}
+
+setInterval(createParticle,800);
+
+
+/* -------- ESTRELLAS LEJANAS -------- */
+
+function createStar(){
+    const s = document.createElement("div");
+    s.className = "star";
+    s.style.left = Math.random()*100 + "vw";
+    s.style.top = Math.random()*100 + "vh";
+    s.style.animationDuration = (2 + Math.random()*3) + "s";
+    document.body.appendChild(s);
+
+    setTimeout(()=> s.remove(),6000);
+}
+
+setInterval(createStar,1500);
+
+
+/* --------- CORAZONES Y FLORES --------- */
+
+const startScreen = document.getElementById("startScreen");
+
+function createFalling(){
+    const symbols = ["💖","💗","💘","🌸","🌷","🌹"];
+    const el = document.createElement("div");
+    el.classList.add("falling");
+    el.innerHTML = symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left = Math.random()*100 + "vw";
+    el.style.animationDuration = (3 + Math.random()*5) + "s";
+    el.style.fontSize = (15 + Math.random()*25) + "px";
+    startScreen.appendChild(el);
+
+    setTimeout(()=>{ el.remove(); },8000);
+}
+
+setInterval(createFalling,300);
+
+/* --------- INICIO --------- */
+
+function startExperience(){
+    startScreen.classList.add("fade-out");
+
+    setTimeout(()=>{
+        startScreen.style.display="none";
+        playMusicWithFade();
+    },1800);
+
+
+}
+
+/* --------- CARTAS --------- */
+
+const stack = document.getElementById("stack");
+let cards = document.querySelectorAll(".card");
+let currentIndex = 0;
+let audio = new Audio();
+
+function setZIndex(){
+    cards.forEach((card,i)=>{
+        card.style.zIndex = cards.length - i;
+    });
+}
+
+setZIndex();
+
+function playMusicWithFade(){
+    audio.pause();
+    audio = new Audio("Perfecta.mp3"); // <-- tu canción única
+    audio.loop = true;
+    audio.volume = 0;
+    audio.play();
+
+    let fade = setInterval(()=>{
+        if(audio.volume < 0.95){
+            audio.volume += 0.05;
+        } else clearInterval(fade);
+    }, 200);
+
+    // Mostrar el texto de la primera carta
+    setTimeout(()=> showNextCardText(), 300);
+}
+
+
+/* DRAG CINEMÁTICO */
+
+let startX = 0;
+let currentX = 0;
+let dragging = false;
+let velocity = 0;
+let lastX = 0;
+let lastTime = 0;
+
+cards.forEach(card=>{
+    card.addEventListener("mousedown", startDrag);
+    card.addEventListener("touchstart", startDrag);
+});
+
+function startDrag(e){
+    if(cards[currentIndex] !== e.currentTarget) return;
+
+    dragging = true;
+    startX = e.type.includes("mouse") ? e.clientX : e.touches[0].clientX;
+    lastX = startX;
+    lastTime = Date.now();
+
+    // Feedback visual: levantar carta
+    cards[currentIndex].style.transition = "transform 0.2s ease";
+    cards[currentIndex].style.boxShadow = "0 30px 60px rgba(0,0,0,0.8)";
+    cards[currentIndex].style.cursor = "grabbing";
+
+    document.addEventListener("mousemove", drag);
+    document.addEventListener("mouseup", endDrag);
+    document.addEventListener("touchmove", drag);
+    document.addEventListener("touchend", endDrag);
+}
+
+function drag(e){
+    if(!dragging) return;
+
+    currentX = e.type.includes("mouse") ? e.clientX : e.touches[0].clientX;
+    let diff = currentX - startX;
+
+    // Calculamos velocidad para momentum
+    let now = Date.now();
+    velocity = (currentX - lastX) / (now - lastTime); // px/ms
+    lastX = currentX;
+    lastTime = now;
+
+    // Tilt dinámico según movimiento
+    let rotate = diff / 15; 
+
+    // Aplicamos transform
+    cards[currentIndex].style.transform = `translateX(${diff}px) rotate(${rotate}deg) scale(1.03)`;
+
+    const rect = cards[currentIndex].getBoundingClientRect();
+    createDragTrailPremium(rect.left + rect.width/2, rect.top + rect.height/2, velocity);
+
+
+}
+
+function endDrag(){
+    if(!dragging) return;
+    dragging = false;
+
+    let diff = currentX - startX;
+    let card = cards[currentIndex];
+
+    // Quitar feedback visual
+    card.style.cursor = "grab";
+    card.style.boxShadow = "0 20px 40px rgba(0,0,0,0.6)";
+
+    // Umbral de swipe
+    if(Math.abs(diff) > 120 || Math.abs(velocity) > 0.3){
+        // Momentum: la carta sigue un poco según la velocidad
+        let direction = diff + velocity * 200; 
+        card.style.transition = "transform 0.6s ease-out, opacity 0.6s ease-out";
+        card.style.transform = `translateX(${direction > 0 ? 1000 : -1000}px) rotate(${direction/15}deg)`;
+        card.style.opacity = "0";
+
+        setTimeout(()=>{
+            card.style.display="none";
+            currentIndex++;
+            //createSparkleBurst();
+            if(currentIndex < cards.length) showNextCardText();
+
+            else audioFadeOut();
+            if(currentIndex >= cards.length) setTimeout(showFinalMessage,1500);
+        },600);
+
+    } else {
+        // Si no pasa el umbral, vuelve suavemente
+        card.style.transition = "transform 0.5s cubic-bezier(.22,.61,.36,1)";
+        card.style.transform = "translateX(0) rotate(0deg) scale(1)";
+    }
+}
+
+
+function swipeCard(){
+
+   if(currentIndex >= cards.length - 1){
+
+    audioFadeOut();
+
+    setTimeout(()=>{
+        // Animar título y texto de la nueva carta
+let nextCard = cards[currentIndex];
+if(nextCard){
+    const title = nextCard.querySelector('h3');
+    const text = nextCard.querySelector('p');
+    
+    title.style.opacity = 0;
+    text.style.opacity = 0;
+
+    // Animaciones reiniciadas
+    title.style.animation = 'fadeUpText 1s ease forwards';
+    text.style.animation = 'fadeUpText 1.2s ease forwards';
+}
+
+    showFinalMessage();
+    },1500);
+
+    return;
+}
+
+
+    let card = cards[currentIndex];
+
+    card.style.transition = "transform 0.5s ease, opacity 0.5s ease";
+
+    card.style.transform = "translateX(100vw) rotate(30deg)";
+    card.style.opacity = "0";
+
+    setTimeout(()=>{
+        card.style.display = "none";
+        currentIndex++;
+        //createSparkleBurst();
+        //playMusicWithFade();
+        showNextCardText();
+    },500);
+}
+
+function audioFadeOut(){
+
+    let fade = setInterval(()=>{
+        if(audio.volume > 0.05){
+            audio.volume -= 0.05;
+        }else{
+            audio.pause();
+            clearInterval(fade);
+        }
+    },200);
+}
+
+function showFinalMessage() {
+
+    const msg = document.createElement("div");
+    msg.className = "final-message";
+    msg.innerHTML = `
+        <div class="final-content">
+            <h2 style="text-align:center;">💖 Y esta historia apenas comienza... 💖</h2>
+            <p class="final-text" data-text="
+Mi amor por ti no depende de fechas 🎉❤️,
+porque lo celebro contigo todos los días 🌞💑.
+
+Feliz 14 de Febrero, mi amor Diana ✨💖
+
+Att. quien te ama mucho, Esteban 💌
+            " style="white-space: pre-wrap; text-align:center;"></p>
+        </div>
+        <div class="final-flash"></div>
+    `;
+
+    document.body.appendChild(msg);
+
+    setTimeout(() => {
+        msg.classList.add("show");
+        triggerFinalFlash();
+        typeFinalText(); // llama a la máquina de escribir
+    }, 100);
+}
+
+// --------- MÁQUINA DE ESCRIBIR PARA EL MENSAJE FINAL ---------
+function typeFinalText() {
+    const p = document.querySelector(".final-text");
+    if (!p) return;
+
+    const fullText = p.dataset.text.trim();
+    p.textContent = "";
+
+    let i = 0;
+    const interval = setInterval(() => {
+        const char = fullText.charAt(i);
+        p.textContent += char;
+        i++;
+
+        // Cuando llegamos a la última línea (Att...) aplicamos estilo especial
+        if (fullText.substring(i).startsWith("Att.")) {
+            p.innerHTML = p.innerHTML.replace(
+                /Att\. quien te ama mucho, Esteban 💌/,
+                `<span style="font-family:'Dancing Script', cursive; font-size:clamp(20px,3vw,28px); color:#ff99cc;">Att. quien te ama mucho, Esteban 💌</span>`
+            );
+        }
+
+        if (i >= fullText.length) clearInterval(interval);
+    }, 120); // velocidad más lenta para leer con calma
+}
+
+
+
+function triggerFinalFlash(){
+
+    const flash = document.querySelector(".final-flash");
+
+    
+
+    flash.classList.add("flash-active");
+
+    setTimeout(()=>{
+        flash.classList.remove("flash-active");
+    },1200);
+}
+
+function createDragTrail(x, y){
+    const hearts = ["💖","💗","💕","💘"];
+    const el = document.createElement("div");
+    el.className = "drag-trail";
+    el.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+
+    // Posición inicial en la carta
+    el.style.left = x + "px";
+    el.style.top = y + "px";
+
+    document.body.appendChild(el);
+
+    // Animación: subir y desvanecer
+    setTimeout(()=>{
+        el.style.transform = "translateY(-20px) scale(1.2)";
+        el.style.opacity = "0";
+    }, 10);
+
+    setTimeout(()=> el.remove(), 800);
+}
+
+function createDragTrailPremium(x, y, velocity){
+    const colors = ["#ffb6c1", "#ff99cc", "#ffc0cb", "#ff69b4", "#ff85c1"];
+    const symbols = ["💖","💗","💕","💘"];
+
+    const el = document.createElement("div");
+    el.className = "drag-trail";
+    el.innerHTML = symbols[Math.floor(Math.random()*symbols.length)];
+
+    // Color aleatorio de la paleta pastel
+    el.style.color = colors[Math.floor(Math.random()*colors.length)];
+
+    // Posición inicial
+    el.style.left = x + "px";
+    el.style.top = y + "px";
+
+    document.body.appendChild(el);
+
+    // Distancia de dispersión según velocidad
+    const dx = (Math.random() - 0.5) * 40 + velocity * 200; // horizontal
+    const dy = -20 - Math.random()*30; // arco hacia arriba
+    const scale = 1 + Math.random()*0.3;
+
+    setTimeout(()=>{
+        el.style.transform = `translate(${dx}px, ${dy}px) scale(${scale})`;
+        el.style.opacity = "0";
+    }, 10);
+
+    setTimeout(()=> el.remove(), 800);
+}
+
+const startBtn = document.querySelector('.start-btn');
+
+startBtn.addEventListener('mouseenter', () => {
+    for (let i = 0; i < 3; i++) { // 3 corazones por hover
+        createBtnHeart();
+    }
+});
+
+function createBtnHeart() {
+    const heartSymbols = ["💖","💗","💕","💘"];
+    const heart = document.createElement('div');
+    heart.className = 'btn-heart';
+    heart.innerHTML = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+
+    // Posición inicial relativa al botón
+    const rect = startBtn.getBoundingClientRect();
+    heart.style.left = (rect.left + rect.width/2 + (Math.random()*40 - 20)) + "px";
+    heart.style.top = (rect.top + rect.height/2 + (Math.random()*20 - 10)) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 1200);
+}
+
+function animateCardText(index){
+    const card = cards[index];
+    if(!card) return;
+
+    const title = card.querySelector('h3');
+    const text = card.querySelector('p');
+
+    // Resetear opacidad y animación
+    title.style.opacity = 0;
+    text.style.opacity = 0;
+
+    title.style.animation = 'fadeUpText 1s ease forwards';
+    text.style.animation = 'fadeUpText 1.2s ease forwards';
+}
+
+// Llama a esta función cada vez que se muestra una carta
+// Por ejemplo, dentro de playMusicWithFade() después de cargar la carta:
+animateCardText(currentIndex);
+
+// --------- MÁQUINA DE ESCRIBIR PARA MINI CUENTOS ---------
+function typeCardText(card){
+    const p = card.querySelector(".card-text");
+    const fullText = p.dataset.text;
+    if(!fullText) return; // evita texto vacío
+    p.textContent = ""; // limpiar texto previo
+
+    let i = 0;
+    const interval = setInterval(()=>{
+        p.textContent += fullText.charAt(i);
+        i++;
+        if(i >= fullText.length) clearInterval(interval);
+    }, 80); // velocidad lenta
+}
+
+function showNextCardText(){
+    const nextCard = cards[currentIndex];
+    if(nextCard && nextCard.style.display !== "none"){
+        typeCardText(nextCard);
+    }
+}
+
+// Modificar playMusicWithFade para llamar a showNextCardText
+
+
+// Lista de emojis y símbolos románticos para el título
+const titleEmojis = ["💖", "💘", "💞", "🌹", "💗"];
+const baseTitle = " Nuestra Historia de Amor ";
+let emojiIndex = 0;
+
+// Función para alternar el título cada 800ms
+setInterval(() => {
+    document.title = titleEmojis[emojiIndex] + baseTitle + titleEmojis[emojiIndex];
+    emojiIndex = (emojiIndex + 1) % titleEmojis.length;
+}, 800);
+
+
+</script>
+
+</body>
+</html>
