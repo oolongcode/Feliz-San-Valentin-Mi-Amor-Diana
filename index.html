@@ -520,7 +520,6 @@ body{
 
 /* ---------------- CARTAS ---------------- */
 
-/* CONTENEDOR DE CARTAS CENTRADO Y SEGURO */
 .stack {
     position: relative;
     width: 90vw;
@@ -544,7 +543,6 @@ body{
         margin: 8px auto;
     }
 }
-
 
 .card{
     position:absolute;
@@ -582,6 +580,8 @@ body{
     border-radius: 20px;
     margin-bottom: 10px;
 }
+
+
 .card h3 {
     font-family: 'Dancing Script', cursive;
     font-size: clamp(16px, 4vw, 24px);
@@ -609,7 +609,7 @@ body{
     margin: 0 auto;
 }
 
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
     .card {
         padding: 10px;
     }
@@ -808,8 +808,6 @@ function startExperience() {
     }, 1800);
 }
 
-
-
 /* --------- CARTAS --------- */
 
 const stack = document.getElementById("stack");
@@ -913,21 +911,22 @@ function endDrag(){
 
     // Umbral de swipe
     if(Math.abs(diff) > 120 || Math.abs(velocity) > 0.3){
-        // Momentum: la carta sigue un poco según la velocidad
-        let direction = diff + velocity * 200; 
-        card.style.transition = "transform 0.6s ease-out, opacity 0.6s ease-out";
-        card.style.transform = `translateX(${direction > 0 ? 1000 : -1000}px) rotate(${direction/15}deg)`;
-        card.style.opacity = "0";
+    let direction = diff + velocity * 200;
+    card.style.transition = "transform 0.6s ease-out, opacity 0.6s ease-out";
+    card.style.transform = `translateX(${direction > 0 ? 1000 : -1000}px) rotate(${direction/15}deg)`;
+    card.style.opacity = "0";
 
-        setTimeout(()=>{
-            card.style.display="none";
-            currentIndex++;
-            //createSparkleBurst();
-            if(currentIndex < cards.length) showNextCardText();
+    setTimeout(() => {
+        card.style.display = "none";
+        currentIndex++;
 
-            else audioFadeOut();
-            if(currentIndex >= cards.length) setTimeout(showFinalMessage,1500);
-        },600);
+        if(currentIndex < cards.length) {
+            showNextCardText();
+        } else {
+            audioFadeOut();
+            setTimeout(showFinalMessage, 1200);
+        }
+    }, 600);
 
     } else {
         // Si no pasa el umbral, vuelve suavemente
@@ -981,34 +980,19 @@ if(nextCard){
     },500);
 }
 
-function audioFadeOut() {
-    if(!audio) return;
+function audioFadeOut(){
 
-    // Detectar móvil
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if(isMobile){
-        stopAudio();
-        return;
-    }
-
-    let fade = setInterval(() => {
+    let fade = setInterval(()=>{
         if(audio.volume > 0.05){
             audio.volume -= 0.05;
-        } else {
+        }else{
             audio.pause();
             clearInterval(fade);
         }
-    }, 200);
-}
-
-// Cuando terminen las cartas
-if(currentIndex >= cards.length) {
-    audioFadeOut();
-    setTimeout(showFinalMessage, 1500);
+    },200);
 }
 
 function showFinalMessage() {
-
     const msg = document.createElement("div");
     msg.className = "final-message";
     msg.innerHTML = `
@@ -1025,19 +1009,21 @@ Att. quien te ama mucho, Esteban 💌
         </div>
         <div class="final-flash"></div>
     `;
-
     document.body.appendChild(msg);
 
     setTimeout(() => {
         msg.classList.add("show");
         triggerFinalFlash();
-        typeFinalText(); // llama a la máquina de escribir
+
+        // Capturamos el párrafo recién creado
+        const finalParagraph = msg.querySelector(".final-text");
+        typeFinalText(finalParagraph);
     }, 100);
 }
 
+
 // --------- MÁQUINA DE ESCRIBIR PARA EL MENSAJE FINAL ---------
-function typeFinalText() {
-    const p = document.querySelector(".final-text");
+function typeFinalText(p) {
     if (!p) return;
 
     const fullText = p.dataset.text.trim();
@@ -1049,7 +1035,7 @@ function typeFinalText() {
         p.textContent += char;
         i++;
 
-        // Cuando llegamos a la última línea (Att...) aplicamos estilo especial
+        // Aplicar estilo especial al final
         if (fullText.substring(i).startsWith("Att.")) {
             p.innerHTML = p.innerHTML.replace(
                 /Att\. quien te ama mucho, Esteban 💌/,
@@ -1058,8 +1044,9 @@ function typeFinalText() {
         }
 
         if (i >= fullText.length) clearInterval(interval);
-    }, 120); // velocidad más lenta para leer con calma
+    }, 120);
 }
+
 
 
 
@@ -1185,12 +1172,14 @@ function typeCardText(card){
     }, 80); // velocidad lenta
 }
 
-function showNextCardText(){
+function showNextCardText() {
     const nextCard = cards[currentIndex];
-    if(nextCard && nextCard.style.display !== "none"){
-        typeCardText(nextCard);
+    if(nextCard && nextCard.style.display !== "none") {
+        animateCardText(currentIndex); // fade títulos y párrafos
+        typeCardText(nextCard);        // máquina de escribir
     }
 }
+
 
 // Modificar playMusicWithFade para llamar a showNextCardText
 
@@ -1211,11 +1200,3 @@ setInterval(() => {
 
 </body>
 </html>
-
-
-
-
-
-
-
-
