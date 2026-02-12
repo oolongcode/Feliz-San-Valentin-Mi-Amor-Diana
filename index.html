@@ -682,6 +682,7 @@ y quiero seguir escribiéndola contigo, llenándola de amor cada día 💕❤️
 
 
 <script>
+let audio; // variable global para controlar la música
 
 function createSparkleBurst(){
 
@@ -769,25 +770,28 @@ function startExperience(){
     startScreen.classList.add("fade-out");
 
     setTimeout(()=>{
-        startScreen.style.display="none";
+        startScreen.style.display = "none";
 
-        // Crear audio aquí, tras interacción
-        audio = new Audio("Perfecta.mp3"); // ruta exacta
-        audio.loop = true;
-        audio.volume = 0;
-        audio.play().catch(e => console.log("Interacción requerida para audio", e));
+        if(!audio){ // solo si aún no existe
+            audio = new Audio("Perfecta.mp3"); // ruta exacta
+            audio.loop = true;
+            audio.volume = 0;
+            audio.play().catch(e => console.log("Interacción requerida para audio", e));
 
-        // Fade-in
-        let fade = setInterval(()=>{
-            if(audio.volume < 0.7){ // volumen máximo
-                audio.volume += 0.05;
-            } else clearInterval(fade);
-        }, 200);
+            // Fade-in del volumen
+            let fade = setInterval(()=>{
+                if(audio.volume < 0.7){
+                    audio.volume += 0.05;
+                } else clearInterval(fade);
+            }, 200);
+        }
 
         // Mostrar la primera tarjeta
         showNextCardText();
-    },1800);
+
+    }, 1800);
 }
+
 
 
 /* --------- CARTAS --------- */
@@ -1177,6 +1181,7 @@ setInterval(() => {
 
 </body>
 </html>
+
 
 
 
