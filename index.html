@@ -983,16 +983,29 @@ if(nextCard){
     },500);
 }
 
-function audioFadeOut(){
+function audioFadeOut() {
+    if (!audio) return;
 
-    let fade = setInterval(()=>{
-        if(audio.volume > 0.05){
+    // Detectar móvil
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        // Para móviles, pausa el audio directamente
+        audio.pause();
+        audio.currentTime = 0; // opcional, reinicia al inicio
+        return;
+    }
+
+    // Para desktop, fade out suave
+    let fade = setInterval(() => {
+        if (audio.volume > 0.05) {
             audio.volume -= 0.05;
-        }else{
+        } else {
             audio.pause();
+            audio.currentTime = 0; // reiniciar al inicio
             clearInterval(fade);
         }
-    },200);
+    }, 200);
 }
 
 function showFinalMessage() {
@@ -1203,3 +1216,4 @@ setInterval(() => {
 
 </body>
 </html>
+
