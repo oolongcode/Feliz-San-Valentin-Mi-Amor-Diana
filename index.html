@@ -784,29 +784,27 @@ setInterval(createFalling,300);
 
 /* --------- INICIO --------- */
 
-function startExperience(){
+function startExperience() {
     startScreen.classList.add("fade-out");
 
-    setTimeout(()=>{
-        startScreen.style.display = "none";
-
-        if(!audio){ // solo si aún no existe
-            audio = new Audio("Perfecta.mp3"); // ruta exacta
-            audio.loop = true;
-            audio.volume = 0;
-            audio.play().catch(e => console.log("Interacción requerida para audio", e));
-
-            // Fade-in del volumen
-            let fade = setInterval(()=>{
+    // reproducir audio directamente al clic
+    if(!audio){ 
+        audio = new Audio("Perfecta.mp3");
+        audio.loop = true;
+        audio.volume = 0;
+        audio.play().then(() => {
+            // fade-in del volumen
+            let fade = setInterval(() => {
                 if(audio.volume < 0.7){
                     audio.volume += 0.05;
                 } else clearInterval(fade);
             }, 200);
-        }
+        }).catch(e => console.log("Interacción requerida para audio", e));
+    }
 
-        // Mostrar la primera tarjeta
-        showNextCardText();
-
+    setTimeout(() => {
+        startScreen.style.display = "none";
+        showNextCardText(); // Mostrar primera tarjeta
     }, 1800);
 }
 
@@ -1199,6 +1197,7 @@ setInterval(() => {
 
 </body>
 </html>
+
 
 
 
