@@ -520,13 +520,31 @@ body{
 
 /* ---------------- CARTAS ---------------- */
 
-.stack{
-    position:relative;
-    width:90vw;
-    max-width:450px;
-    aspect-ratio:4/5;
-    max-height:90vh;
+/* CONTENEDOR DE CARTAS CENTRADO Y SEGURO */
+.stack {
+    position: relative;
+    width: 90vw;
+    max-width: 450px;
+    aspect-ratio: 4/5;
+    
+    /* Altura flexible, centrada verticalmente con márgenes seguros */
+    max-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 20px);
+    margin: 10px auto; /* pequeño margen extra superior e inferior */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* Para móviles, aseguramos que las tarjetas no se peguen al notch o barra inferior */
+@media (max-width: 480px) {
+    .stack {
+        max-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 16px);
+        width: 95vw;
+        margin: 8px auto;
+    }
+}
+
 
 .card{
     position:absolute;
@@ -1181,6 +1199,7 @@ setInterval(() => {
 
 </body>
 </html>
+
 
 
 
