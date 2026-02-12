@@ -911,22 +911,24 @@ function endDrag(){
 
     // Umbral de swipe
     if(Math.abs(diff) > 120 || Math.abs(velocity) > 0.3){
-    let direction = diff + velocity * 200;
-    card.style.transition = "transform 0.6s ease-out, opacity 0.6s ease-out";
-    card.style.transform = `translateX(${direction > 0 ? 1000 : -1000}px) rotate(${direction/15}deg)`;
-    card.style.opacity = "0";
+        let direction = diff + velocity * 200;
+        card.style.transition = "transform 0.6s ease-out, opacity 0.6s ease-out";
+        card.style.transform = `translateX(${direction > 0 ? 1000 : -1000}px) rotate(${direction/15}deg)`;
+        card.style.opacity = "0";
 
-    setTimeout(() => {
-        card.style.display = "none";
-        currentIndex++;
+        setTimeout(() => {
+            card.style.display = "none";
+            currentIndex++;
 
-        if(currentIndex < cards.length) {
-            showNextCardText();
-        } else {
-            audioFadeOut();
-            setTimeout(showFinalMessage, 1200);
-        }
-    }, 600);
+            if(currentIndex < cards.length) {
+                // Mostrar la siguiente carta
+                showNextCardText();
+            } else {
+                // Última carta pasada: fade out música y mostrar mensaje final
+                audioFadeOut();
+                setTimeout(showFinalMessage, 1200);
+            }
+        }, 600);
 
     } else {
         // Si no pasa el umbral, vuelve suavemente
@@ -934,6 +936,7 @@ function endDrag(){
         card.style.transform = "translateX(0) rotate(0deg) scale(1)";
     }
 }
+
 
 
 function swipeCard(){
