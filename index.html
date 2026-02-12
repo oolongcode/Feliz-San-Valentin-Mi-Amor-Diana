@@ -570,8 +570,23 @@ body{
     font-size:clamp(18px,4vw,24px);
 }
 
-.card p{
-    font-size:clamp(14px,3.5vw,18px);
+.card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(14px, 3.5vw, 16px); /* tamaño flexible para móviles */
+    color: #ffc0cb;
+    text-shadow: 0 0 4px rgba(255,182,193,0.6);
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeUpText 1.2s ease forwards;
+    animation-delay: 0.2s;
+
+    /* Nuevas propiedades para que el texto se adapte */
+    word-wrap: break-word;     /* rompe palabras largas */
+    overflow-wrap: break-word; /* compatibilidad */
+    overflow: hidden;          /* evita que se salga del contenedor */
+    text-align: center;        /* centrado dentro de la tarjeta */
+    max-height: 40%;           /* opcional: limita altura dentro de la tarjeta */
+    margin: 0 auto;            /* centrado horizontal */
 }
 
 .drag-trail{
@@ -1131,3 +1146,4 @@ setInterval(() => {
 
 </body>
 </html>
+
